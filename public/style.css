@@ -18,21 +18,22 @@ body {
   background-color: rgb(238, 238, 238);
   background: linear-gradient(
     to bottom right,
-    rgb(245, 245, 245),
-    rgb(145, 145, 145)
-  );
+    rgb(141, 42, 255),
+    rgb(136, 0, 255)
+  ); 
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+h3{
+  font-size: 22px;
+}
 .app {
-  background-color: rgb(255, 255, 255);
-  min-width: 400px;
-  max-width: 600px;
-  margin: 50px auto;
+  max-width: 500px;
+  margin: 30px auto;
   padding: 30px;
   border-radius: 13px;
-  background: #e0e0e0;
-  box-shadow: 5px 5px 11px #b8b8b8, -5px -5px 11px #ffffff;
+  background: #eeeeee;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
 }
 .Form {
   display: flex;
@@ -40,13 +41,13 @@ body {
   justify-content: center;
 }
 .label:nth-child(1){
-  margin-top: 40px;
+  margin-top: 30px;
 }
 .label {
   display: flex;
   flex-direction: column;
   margin: 10px 0;
-  font-size: 18px;
+  font-size: 19px;
   position: relative;
 }
 .input {
@@ -59,12 +60,14 @@ body {
   padding: 0 10px;
   box-shadow: 3px 3px 5px 00 rgb(188, 188, 188);
 }
-.input:focus{
-  outline: 2px solid rgb(119, 0, 255);
+.input.wrong {
+  border: 2px solid rgb(255, 0, 0);
 }
-.sia{
-  display: flex;
-  justify-content: center;
+.input.corect {
+  border: 2px solid rgb(27, 133, 0);
+}
+.input:focus{
+  /* outline: 2px 5px solid rgb(119, 0, 255); */
 }
 .submit{
   margin-top: 20px;
@@ -77,17 +80,38 @@ body {
   color: white;
   font-size: 20px;
 }
+ion-icon{
+  display: none;
+  visibility:visible
+}
 ion-icon.red{
   font-size: 30px;
   position: absolute;
   left: 10px;
-  top: 47px;
+  top: 46px;
   color: red;
 }
 ion-icon.green{
   font-size: 30px;
   position: absolute;
   left: 10px;
-  top: 47px;
+  top: 46px;
   color: green;
+}
+.alertText{
+  color: red;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,175%);
+  width: 100%;
+  text-align: center;
+}
+.alertText2{
+  color: red;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
 }
